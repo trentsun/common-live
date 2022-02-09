@@ -3,8 +3,10 @@ package com.xcbeyond.springboot.mapper;
 import com.xcbeyond.springboot.model.Platform;
 
 import java.util.HashMap;
+import java.util.List;
 
 public interface PlatformMapper {
+    public List<Platform> getPlatforms();
     /**
      * 通过platformid查询
      * @param platformId

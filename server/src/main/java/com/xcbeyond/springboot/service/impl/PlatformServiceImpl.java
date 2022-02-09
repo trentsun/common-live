@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.HashMap;
+import java.util.List;
 
 @Service
 //指定使用缓存名
@@ -26,6 +27,11 @@ public class PlatformServiceImpl implements PlatformService {
     @Override
     public int insertPlatformByJdbcTemplate(Platform platform) {
         return platformDao.insertPlatform(platform);
+    }
+
+    @Override
+    public List<Platform> getPlatforms() {
+        return platformMapper.getPlatforms();
     }
 
     @Override

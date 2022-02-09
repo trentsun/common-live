@@ -21,5 +21,6 @@ CREATE TABLE `platform`
 (
     `id` varchar(10) NOT NUll,
     `name` varchar(20) NOT NULL,
-    `icon_url` varchar(255) DEFAULT NULL
+    `icon_url` varchar(255) DEFAULT NULL,
+    PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT  CHARSET=utf8

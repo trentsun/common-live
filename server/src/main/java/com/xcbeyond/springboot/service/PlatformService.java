@@ -2,6 +2,8 @@ package com.xcbeyond.springboot.service;
 
 import com.xcbeyond.springboot.model.Platform;
 
+import java.util.List;
+
 public interface PlatformService {
 
     /**
@@ -9,6 +11,8 @@ public interface PlatformService {
      * @return
      */
     public int insertPlatformByJdbcTemplate(Platform platform);
+
+    public List<Platform> getPlatforms();
 
     /**
      *  通过id查询

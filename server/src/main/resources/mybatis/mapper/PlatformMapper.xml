@@ -6,6 +6,12 @@
 		id,name,icon_url
 	</sql>
 
+	<select id="getPlatforms" resultType="com.xcbeyond.springboot.model.Platform">
+		select
+		<include refid="column"></include>
+		from platform
+	</select>
+
 	<select id="queryPlatformByPlatformId" parameterType="string"
 		resultType="com.xcbeyond.springboot.model.Platform">
 		select
