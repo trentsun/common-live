@@ -1,5 +1,7 @@
 package com.xcbeyond.springboot.controller;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
 import com.xcbeyond.springboot.model.Platform;
 import com.xcbeyond.springboot.service.PlatformService;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -42,7 +44,8 @@ public class PlatformController {
 	@RequestMapping(value = "/getPlatforms", method=RequestMethod.GET)
 	public String getPlatforms() {
 		List<Platform> platformList = platformService.getPlatforms();
-		return platformList.toString();
+		JSONArray jsonArray = JSONArray.parseArray(JSON.toJSONString(platformList));
+		return jsonArray.toString();
 	}
 	
 	/**

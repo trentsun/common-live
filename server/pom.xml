@@ -62,7 +62,12 @@
         </dependency>
         <!-- jsonrpc4j依赖的包 -->
 
-		
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.7</version>
+		</dependency>
+
 		<!-- redis依赖包 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
