@@ -10,7 +10,7 @@ public class BaseResponse<T> {
     @JsonProperty(value = "data")
     public T data;
     @JsonProperty(value = "code")
-    public int code = 0;
+    public int errorCode = 0;
     @JsonProperty(value = "errorMsg")
     public String errorMsg = "";
 
@@ -19,7 +19,7 @@ public class BaseResponse<T> {
         return "{" +
                 "success:" + success +
                 ", data:" + data +
-                ", code:" + code +
+                ", code:" + errorCode +
                 ", errorMsg:'" + errorMsg + '\'' +
                 '}';
     }
