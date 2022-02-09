@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xcbeyond.springboot.mapper.PlatformMapper">
+	<sql id="column">
+		id,name,icon_url
+	</sql>
+
+	<select id="queryPlatformByPlatformId" parameterType="string"
+		resultType="com.xcbeyond.springboot.model.Platform">
+		select
+		<include refid="column"></include>
+		from platform
+		where id = #{id}
+	</select>
+	
+	<!-- 通过id更新name -->
+	<update id="updateByPlatformId" parameterType="map">
+		update platform set name = #{name} where id = #{id}
+	</update>
+</mapper>
